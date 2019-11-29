@@ -1,0 +1,50 @@
+.container2 {
+    /*font-size: 3rem;*/
+    margin-top: 1rem;
+}
+.top__margin{
+
+}
+.container2 input,
+.container2 ::-webkit-input-placeholder {
+
+}
+.container2 input:focus {
+    background-color: transparent;
+    box-shadow: none !important;
+    border: none;
+    border-bottom: 2px solid tomato;
+}
+h5 {
+    margin-bottom: unset;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+h1, h3{
+    font-size: 3rem !important;
+    font-weight: 700 !important;
+    margin-top: 1rem !important;
+    color: lightyellow;
+}
+i {
+    font-size: 9rem;
+    background: -webkit-gradient(linear, left top, left bottom, from(yellow), to(lightblue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+span{
+    margin: 20px;
+}
+.box{
+    /*background: rgb(238,174,202);*/
+    /*background: -moz-radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(90,148,217,0.2) 100%);*/
+    /*background: -webkit-radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(90,148,217,0.2) 100%);*/
+    /*background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(90,148,217,0.2) 100%);*/
+    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca",endColorstr="#5a94d9",GradientType=1);*/
+}
+p{
+    font-size: 7rem;
+    margin-left: 1rem;
+    color: lightyellow;
+}

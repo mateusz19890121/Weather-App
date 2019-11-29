@@ -1,0 +1,72 @@
+form {
+    margin-top: 3rem;
+}
+.form-control{
+    padding: 0 !important;
+
+}
+form input[name="city"],
+form input[name="country"] {
+    background-color: transparent;
+    color: #e0a800;
+    border: none;
+    border-bottom: 2px solid #ffc107;
+    border-radius: 0;
+    outline: none;
+    text-decoration: none;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+input {
+    width: 100%;
+}
+.btn{
+    color: brown !important;
+    font-weight: 500 !important;
+    font-size: 2.4rem !important;
+}
+.input__div{
+    width: 38%;
+}
+
+.button__div{
+    align-self: flex-end;
+}
+.row{
+    justify-content: center;
+}
+.select__box1{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 70%;
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: brown;
+    padding-right: 0.9rem;
+}
+.select__box2{
+    width:30%;
+    padding-bottom: 1.1rem;
+}
+.select__container{
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+}
+form .form-control::-moz-placeholder {
+    color: brown;
+    opacity: 1;
+}
+form .form-control:-ms-input-placeholder {
+    color: brown;
+}
+form .form-control::-webkit-input-placeholder {
+    color: brown;
+}
+.or{
+    color: brown;
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin-top: 2rem;
+}
