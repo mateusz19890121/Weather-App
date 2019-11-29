@@ -8,7 +8,6 @@ const Form = props => {
         props.onSelectCity(selectedOption)
     };
 
-
     return (
         <div className="container2 top__margin">
             <form onSubmit={props.loadweather}>
@@ -22,18 +21,6 @@ const Form = props => {
                             autoComplete="off"
                         />
                     </div>
-                    {/*<div className="select">*/}
-                    {/*    <Select*/}
-                    {/*        name="form-field-name"*/}
-                    {/*        value={props.cities}*/}
-                    {/*        // onChange={this.handleChange}*/}
-                    {/*        // clearable={this.state.clearable}*/}
-                    {/*        // searchable={this.state.searchable}*/}
-                    {/*        labelKey='name'*/}
-                    {/*        valueKey='countryCode'*/}
-                    {/*        options={props.cities}*/}
-                    {/*    />*/}
-                    {/*</div>*/}
                     <div className="button__div">
                         <button className="btn btn-warning">Get Weather</button>
                     </div>

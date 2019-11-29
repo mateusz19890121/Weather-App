@@ -1,9 +1,11 @@
+import Crawl from 'react-star-wars-crawl'
+import 'react-star-wars-crawl/lib/index.css'
+import Intro from './components/Intro'
 import React from "react";
 import "./App.css";
 import Form from "./components/Form";
 import Weather from "./components/Weather";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { WiDaySunny, WiFog, WiDayThunderstorm, WiSleet, WiDaySnow, WiDayCloudy, WiDayRain } from "react-icons/wi";
 const Api_Key = "6e10fe336ad37b2f12992b32859a336a";
 
 class App extends React.Component {
@@ -20,7 +22,8 @@ class App extends React.Component {
       description: "",
       wind: undefined,
       cities: JSON.parse(localStorage.getItem('cities')) || [],
-      error: false
+      error: false,
+      isIntro: true
     };
 
     this.weatherIcon = {
@@ -33,7 +36,16 @@ class App extends React.Component {
       Clouds: "fas fa-cloud-sun"
     };
     this.cities = JSON.parse(localStorage.getItem('cities'));
+
+    this.hideIntro()
   }
+  hideIntro(){
+    setTimeout(() => {
+      this.setState({
+        isIntro: false
+      })
+    }, 35000)
+}
 
   get_WeatherIcon(icons, rangeId) {
     switch (true) {
@@ -63,7 +75,7 @@ class App extends React.Component {
     }
   }
 
-  calCelsius(temp) {
+  getCelsius(temp) {
     let cell = Math.floor(temp - 273.15);
     return cell;
   }
@@ -92,17 +104,14 @@ class App extends React.Component {
         city: `${response.name}`,
         // country: response.sys.country,
         main: response.weather[0].main,
-        celsius: this.calCelsius(response.main.temp),
-        temp_max: this.calCelsius(response.main.temp_max),
-        temp_min: this.calCelsius(response.main.temp_min),
+        celsius: this.getCelsius(response.main.temp),
+        temp_max: this.getCelsius(response.main.temp_max),
+        temp_min: this.getCelsius(response.main.temp_min),
         description: response.weather[0].description,
         wind: response.wind.speed,
         cities: this.getUnique([{ value: response.name, label: response.name}, ...this.state.cities], 'value').slice(0, 10),
         error: false
-      });
-
-      localStorage.setItem('cities', JSON.stringify(this.state.cities));
-
+      }, () => localStorage.setItem('cities', JSON.stringify(this.state.cities)));
 
       this.get_WeatherIcon(this.weatherIcon, response.weather[0].id);
 
@@ -119,8 +128,15 @@ class App extends React.Component {
   };
 
   render() {
+    let intro = <Intro loadFunction={this.hideIntro}/>;
+    if(!this.state.isIntro) {
+      intro = null
+    }
     if (this.state.error === false) {
       return (
+          <div className="Intro">
+            {intro}
+
           <div className="App">
             <div className="main">
             <Form loadweather={this.getWeather} cities={this.state.cities} onSelectCity={this.selectCity}/>
@@ -134,6 +150,7 @@ class App extends React.Component {
                 wind_speed={this.state.wind}
             />
             </div>
+          </div>
           </div>
       );
     }else{
