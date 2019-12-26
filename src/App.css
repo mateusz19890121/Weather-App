@@ -49,8 +49,12 @@ code {
 .bad__name{
   font-size: 4rem;
   color: red;
+  font-weight: 800;
 }
 .main{
     height: 85vh;
     width: 60vw;
+}
+.bad__container{
+  display: grid;
 }

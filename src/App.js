@@ -44,7 +44,7 @@ class App extends React.Component {
       this.setState({
         isIntro: false
       })
-    }, 35000)
+    }, 20000)
 }
 
   get_WeatherIcon(icons, rangeId) {
@@ -155,7 +155,7 @@ class App extends React.Component {
       );
     }else{
       return (
-          <div className="App">
+          <div className="App bad__container">
             <Form loadweather={this.getWeather}/>
             <div className="bad__name">No city found, please enter correct name</div>
           </div>
