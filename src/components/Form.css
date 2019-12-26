@@ -39,20 +39,23 @@ input {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 70%;
+    width: 100%;
     font-size: 1.9rem;
     font-weight: 700;
     color: brown;
     padding-right: 0.9rem;
 }
 .select__box2{
-    width:30%;
+    width: 482px;
     padding-bottom: 1.1rem;
+    display: flex;
+    justify-content: flex-end;
 }
 .select__container{
     display: flex;
     justify-content: flex-start;
-    width: 90%;
+    width: 750px;
+    margin: 0 auto;
 }
 form .form-control::-moz-placeholder {
     color: brown;
@@ -69,4 +72,10 @@ form .form-control::-webkit-input-placeholder {
     font-size: 1.9rem;
     font-weight: 700;
     margin-top: 2rem;
+}
+.mt-4, .col-md-8, .col-offset-4{
+    color: brown;
+    font-size: 1.1rem;
+    font-weight: 500;
+
 }

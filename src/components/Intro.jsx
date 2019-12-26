@@ -7,7 +7,9 @@ const MyCrawlComponent = () => (
     <Crawl
         title="Episode I"
         subTitle="New Weather Application"
-        text="After a hard fight with the Imperial Forces, CSS, Javascript and Lord React, Rebellion forces are regrouping on planet Earth. Many fell in the fight... some against an infinite amount of stuff to learn, exercises and exams. Now it's time for the final fight with the Imperial Forces... but first lets check the weather... Welcome to Your real time Weather Application. Created by Junior Jedi FrontEnd Developer Mateusz Sakowicz.  "
+        text=" Welcome to my Weather Application, I' m proud to present to You, my first application. my motto is that
+         nothing is impossible. in september 2019 i knew practically nothing about programming, now i'm learning,
+         creating and as you can see, i am having fun programming. "
     />
 
 );
