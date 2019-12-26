@@ -31,12 +31,13 @@ const Form = props => {
                 <div className="select__box1">
                 Choose City from your last search:
                 </div>
-                <div className="select__box2">
-            <Select className="mt-4 col-md-8 col-offset-4"
-                    options = { props.cities }
-                    onChange={handleChange}/>
-                </div>
+
         </div>
+            <div className="select__box2">
+                <Select className="mt-4 col-md-8 col-offset-4"
+                        options = { props.cities }
+                        onChange={handleChange}/>
+            </div>
         </div>
     );
 };
